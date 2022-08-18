@@ -14,4 +14,5 @@ RUN git clone --depth 1 --branch ${FLUTTER_VERSION} https://github.com/flutter/f
 
 RUN yes | flutter doctor --android-licenses \
     && flutter doctor \
+    && flutter precache \
     && chown -R root:root ${FLUTTER_HOME}
